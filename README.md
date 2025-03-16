@@ -13,15 +13,16 @@
 
 **Triton : 3.2.0.post12**
 
-## Install python 3.11.0 + CUDA 12.4 + cuDNN v8.9.7
+## 1.Install python 3.11.0 + CUDA 12.4 + cuDNN v8.9.7
 
-# 增加Windows系統環境變數(下面的路徑是預設路徑)
+## 增加Windows系統環境變數(下面的路徑是預設路徑)
 CUDA_PATH
+
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4
 
-# 下載Visual Stduio Installer
-# 下載安裝Visual Studio Build Tools 2022    version:17.13.2
-# 下載安裝 MSVC四件套
+## Download Visual Stduio Installer
+## Install Visual Studio Build Tools 2022 version : 17.13.2
+## Install MSVC
 1. MSVC v143 - VS 2022 C++ x64/x86 build tools(Latest)
 2. Windows 11 SDK(10.0.22621.0)
 3. C++ CMake tools for Windows
