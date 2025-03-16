@@ -28,7 +28,7 @@
 **RAM : 16GB** *(Better up)*
 
 ## **1. Download and Install**
-python 3.11.0 + CUDA 12.4 + cuDNN v8.9.7
+#### **python 3.11.0 + CUDA 12.4 + cuDNN v8.9.7**
 
 CUDA and cuDNN similar install tutorial : 
 
