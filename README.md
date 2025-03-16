@@ -13,7 +13,9 @@
 
 **pytorch : 2.6.0+cu124**
 
-**Triton for Windows : 3.2.0.post12**
+**triton-windows : 3.2.0.post12**
+
+**torchtune : 0.5.0+cu124**
 
 **LLM : LLaMA2-7B**
 
