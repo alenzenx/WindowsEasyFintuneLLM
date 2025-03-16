@@ -1,5 +1,5 @@
 # Windows Easy Fintune LLM
-![image](https://raw.githubusercontent.com/alenzenx/WindowsEasyFintuneLLM/refs/heads/main/goodjob.jpg?token=GHSAT0AAAAAAC6YDKQ5LNZWWKCL3GFTCWM2Z6W5LXQ)
+![image](https://github.com/alenzenx/WindowsEasyFintuneLLM/blob/main/goodjob.jpg)
 
 **System : Windows 11**
 
