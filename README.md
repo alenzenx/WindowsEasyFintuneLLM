@@ -112,7 +112,7 @@ dtype: fp32
 #### Verify custom_config.yaml
 tune validate custom_config.yaml
 
-## **8.  Create Dummy Test**
+## **8. Create Dummy Test**
 建立 dummy_alpaca.json
 放入
 [
@@ -157,8 +157,8 @@ class MyDummyDataset(Dataset):
             "output": example.get("output", ""),
         }
 
-## **9.  LoRA單GPU訓練**
+## **9. LoRA單GPU訓練**
 tune run lora_finetune_single_device --config custom_config.yaml
 
-## **10.  推理**
+## **10. 推理**
 python test.py
