@@ -1,0 +1,16 @@
+--index-url https://download.pytorch.org/whl/cu124
+
+torch
+torchvision
+torchaudio
+torchao
+torchtune
+
+--extra-index-url https://pypi.org/simple
+
+triton-windows
+transformers
+accelerate
+datasets
+bitsandbytes
+git+https://github.com/huggingface/peft.git
