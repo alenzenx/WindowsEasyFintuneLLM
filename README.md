@@ -34,58 +34,66 @@ CUDA and cuDNN similar install tutorial :
 
 https://medium.com/@alenzenx/安裝-cuda12-6-與-cudnn-8-9-7-34f95ef8ce7f
 
+Verify CUDA GPU :  
+
+    python GPUtest.py
+
 ## **2. Install MSVC for Triton-Windows**
 #### 增加Windows系統環境變數(下面的路徑是預設路徑)
-CUDA_PATH
+    CUDA_PATH
 
-C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4
+    C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4
 
 #### Download Visual Stduio Installer
 #### Install Visual Studio Build Tools 2022 version : 17.13.2
-#### Install MSVC
+#### Install MSVC (Select within Visual Studio Build Tools 2022 version)
 1. MSVC v143 - VS 2022 C++ x64/x86 build tools(Latest)
 2. Windows 11 SDK(10.0.22621.0)
 3. C++ CMake tools for Windows
 4. MSBuild support for LLVM(clang-cl) toolset 
 
-#### 修改Windows User環境變數Path項，加入(下面的路徑是預設路徑)
-C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.43.34808\bin\Hostx64\x64
+#### Modify the Windows User environment variable Path and add the following (the paths below are the default paths)
+    C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.43.34808\bin\Hostx64\x64
+
+Verify Triton :  
+
+    python test_triton.py
 
 ## **3. Create Virtual Environment**
-(下面的路徑 C:\Users\User\Desktop\ourllm 自己修改，且 \Scripts\Activate.ps1 那行要一起改呦)
+(The path below C:\Users\User\Desktop\ourllm should be modified accordingly, and make sure to update the \Scripts\Activate.ps1 line as well.)
 
-python -m venv C:\Users\User\Desktop\ourllm
+    python -m venv C:\Users\User\Desktop\ourllm
 
-C:\Users\User\Desktop\ourllm\Scripts\Activate.ps1
+    C:\Users\User\Desktop\ourllm\Scripts\Activate.ps1
 
 ## **4. Install requirements**
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 ## **5. Download raw LLaMA-2-7B**
-pip install llama-stack
+    pip install llama-stack
 
-llama model list --show-all
+    llama model list --show-all
 
-llama download --source meta --model-id Llama-2-7b
+    llama download --source meta --model-id Llama-2-7b
 
-#### 我的 llama2 驗證金鑰(一串https的網址)
-https://download.llamameta.net/*?Policy=eyJTdGF0ZW1lbnQiOlt7InVuaXF1ZV9oYXNoIjoiMWh0d3JyeWVxOXE1cWpjMTQ5aDQ2OWx5IiwiUmVzb3VyY2UiOiJodHRwczpcL1wvZG93bmxvYWQubGxhbWFtZXRhLm5ldFwvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0MTk1ODM1MH19fV19&Signature=nCSq%7ECseY3cvvI5w7THDAAXAvaiqP81ibq5nLCztW1efQmL-f67TvxGrblYUGV5Kg7URAsDxJNp5NFdOVoyOX5E5fpFm1Dzi2xAfsrunyGVnud-uliH8HdHoEwT9Pmin5qSt4slG9v2n4hSw7t-htP4dd5yh69rpf7GJWH02QKc66Axf4%7EoQ1AhFc0cLpSpS3MUMDp7D1m2jEjT98J4Ee3Hj1eH%7EtU0mGytyncEb-W1bNEZt8TdTIDwE8pY2S9sXpzGkbQrHv5A4QvR0fqEcvio47uvVjYqSH7ExCHJP5WeYEuT6lXNFgfn59oe0coyliIseAXLQet7X7Jbh2m64Tw__&Key-Pair-Id=K15QRJLYKIFSLZ&Download-Request-ID=587287740993120
+#### LLaMA 2 verification key (a URL starting with https)
+    https://download.llamameta.net/*?Policy=eyJTdGF0ZW1lbnQiOlt7InVuaXF1ZV9oYXNoIjoiMWh0d3JyeWVxOXE1cWpjMTQ5aDQ2OWx5IiwiUmVzb3VyY2UiOiJodHRwczpcL1wvZG93bmxvYWQubGxhbWFtZXRhLm5ldFwvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0MTk1ODM1MH19fV19&Signature=nCSq%7ECseY3cvvI5w7THDAAXAvaiqP81ibq5nLCztW1efQmL-f67TvxGrblYUGV5Kg7URAsDxJNp5NFdOVoyOX5E5fpFm1Dzi2xAfsrunyGVnud-uliH8HdHoEwT9Pmin5qSt4slG9v2n4hSw7t-htP4dd5yh69rpf7GJWH02QKc66Axf4%7EoQ1AhFc0cLpSpS3MUMDp7D1m2jEjT98J4Ee3Hj1eH%7EtU0mGytyncEb-W1bNEZt8TdTIDwE8pY2S9sXpzGkbQrHv5A4QvR0fqEcvio47uvVjYqSH7ExCHJP5WeYEuT6lXNFgfn59oe0coyliIseAXLQet7X7Jbh2m64Tw__&Key-Pair-Id=K15QRJLYKIFSLZ&Download-Request-ID=587287740993120
 
 ## **6. Convert the raw LLaMA-2 model into hf format (hf format=huggingface format)**
-下載 https://github.com/huggingface/transformers/blob/main/src/transformers/models/llama/convert_llama_weights_to_hf.py
-pip install protobuf sentencepiece
-python convert_llama_weights_to_hf.py --input_dir "Llama-2-7b" --model_size 7B --output_dir "Llama-2-7b-hf" --llama_version 2
+    pip install protobuf sentencepiece
+
+    python convert_llama_weights_to_hf.py --input_dir "Llama-2-7b" --model_size 7B --output_dir "Llama-2-7b-hf" --llama_version 2
 
 ## **7. Fine-tune LLaMA-2 using Torchtune.**
-#### tune的目錄
-tune ls
+#### torchtune directory
+    tune ls
 
-#### 複製tune預設的QLoRA單GPU訓練的Config檔案
-tune cp llama2/7B_qlora_single_device custom_config.yaml
+#### Copy the default QLoRA single-GPU training config file from tune
+    tune cp llama2/7B_qlora_single_device custom_config.yaml
 
-#### custom_config.yaml
+### **Write custom_config.yaml**
 #### 更改output_dir path
-output_dir: qlora_output
+    output_dir: qlora_output
 
 #### 更改tokenizer path
     tokenizer:
@@ -110,65 +118,64 @@ output_dir: qlora_output
     save_adapter_weights_only: True
 
 #### Change batch size and create dummy test path
-dataset:
-  _component_: my_dummy_dataset.MyDummyDataset
-  data_file: "./dummy_alpaca.json"
-  packed: False  # True increases speed
-seed: null
-shuffle: True
-batch_size: 4
+    dataset:
+      _component_: my_dummy_dataset.MyDummyDataset
+      data_file: "./dummy_alpaca.json"
+      packed: False  # True increases speed
+    seed: null
+    shuffle: True
+    batch_size: 4
 
 #### Floating-point format : bf16 -> fp32 (Geforce need)
-
-dtype: fp32
+    dtype: fp32
 
 #### Verify custom_config.yaml
-tune validate custom_config.yaml
+    tune validate custom_config.yaml
 
 ## **8. Create Dummy Test**
-建立 dummy_alpaca.json
-放入
-[
-    {
-      "instruction": "Dummy Instruction",
-      "input": "Dummy Input",
-      "output": "Dummy Output"
-    }
-]
+Create dummy_alpaca.json
 
-建立 my_dummy_dataset.py
-放入
-import json
-from torch.utils.data import Dataset
-
-class MyDummyDataset(Dataset):
-    def __init__(self, tokenizer=None, data_file=None, packed=False):
-        """
-        tokenizer: 由 Torchtune 以位置引數 (positional arg) 傳入
-        data_file: YAML 中指定的關鍵字引數
-        """
-        super().__init__()
-        self.tokenizer = tokenizer
-        self.packed = packed  # <- 關鍵字參數接收 "packed"
-
-        # 如果 data_file 有指定，就載入資料
-        if data_file is not None:
-            with open(data_file, "r", encoding="utf-8") as f:
-                self.data = json.load(f)
-        else:
-            # 沒有提供檔案就給個空 list
-            self.data = []
-
-    def __len__(self):
-        return len(self.data)
-
-    def __getitem__(self, idx):
-        example = self.data[idx]
-        return {
-            "instruction": example.get("instruction", ""),
-            "input": example.get("input", ""),
-            "output": example.get("output", ""),
+    [
+        {
+        "instruction": "Dummy Instruction",
+        "input": "Dummy Input",
+        "output": "Dummy Output"
         }
+    ]
+
+Create my_dummy_dataset.py
+
+    import json
+    from torch.utils.data import Dataset
+
+    class MyDummyDataset(Dataset):
+        def __init__(self, tokenizer=None, data_file=None, packed=False):
+            """
+            tokenizer: 由 Torchtune 以位置引數 (positional arg) 傳入
+            data_file: YAML 中指定的關鍵字引數
+            """
+            super().__init__()
+            self.tokenizer = tokenizer
+            self.packed = packed  # <- 關鍵字參數接收 "packed"
+
+            # 如果 data_file 有指定，就載入資料
+            if data_file is not None:
+                with open(data_file, "r", encoding="utf-8") as f:
+                    self.data = json.load(f)
+            else:
+                # 沒有提供檔案就給個空 list
+                self.data = []
+
+        def __len__(self):
+            return len(self.data)
+
+        def __getitem__(self, idx):
+            example = self.data[idx]
+            return {
+                "instruction": example.get("instruction", ""),
+                "input": example.get("input", ""),
+                "output": example.get("output", ""),
+            }
 
 ## **9. Single GPU Finetune LLM (Train)**
 tune run lora_finetune_single_device --config custom_config.yaml
