@@ -1,5 +1,16 @@
-## 最終成果 : 加速LLM訓練及推理
-Windows 11 + CUDA 12.4 + cuDNN v8.9.7 + python 3.11.0 + pytorch 2.6.0+cu124 + Triton 3.2.0.post12
+# Windows Easy Fintune LLM
+
+**System : Windows 11**
+
+**CUDA : 12.4**
+
+**cuDNN : v8.9.7**
+
+**python : 3.11.0**
+
+**pytorch : 2.6.0+cu124**
+
+**Triton : 3.2.0.post12**
 
 # 自行安裝python 3.11.0 + CUDA 12.4 + cuDNN v8.9.7
 
