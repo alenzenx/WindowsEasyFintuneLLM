@@ -65,19 +65,19 @@ Verify Triton :
 ## **3. Create Virtual Environment**
 (The path below C:\Users\User\Desktop\ourllm should be modified accordingly, and make sure to update the \Scripts\Activate.ps1 line as well.)
 
-    python -m venv C:\Users\User\Desktop\ourllm
+>   python -m venv C:\Users\User\Desktop\ourllm
 
-    C:\Users\User\Desktop\ourllm\Scripts\Activate.ps1
+>   C:\Users\User\Desktop\ourllm\Scripts\Activate.ps1
 
 ## **4. Install requirements**
     pip install -r requirements.txt
 
 ## **5. Download raw LLaMA-2-7B**
-    pip install llama-stack
+>    pip install llama-stack
 
-    llama model list --show-all
+>    llama model list --show-all
 
-    llama download --source meta --model-id Llama-2-7b
+>    llama download --source meta --model-id Llama-2-7b
 
 #### LLaMA 2 verification key (a URL starting with https)
     https://download.llamameta.net/*?Policy=eyJTdGF0ZW1lbnQiOlt7InVuaXF1ZV9oYXNoIjoiMWh0d3JyeWVxOXE1cWpjMTQ5aDQ2OWx5IiwiUmVzb3VyY2UiOiJodHRwczpcL1wvZG93bmxvYWQubGxhbWFtZXRhLm5ldFwvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0MTk1ODM1MH19fV19&Signature=nCSq%7ECseY3cvvI5w7THDAAXAvaiqP81ibq5nLCztW1efQmL-f67TvxGrblYUGV5Kg7URAsDxJNp5NFdOVoyOX5E5fpFm1Dzi2xAfsrunyGVnud-uliH8HdHoEwT9Pmin5qSt4slG9v2n4hSw7t-htP4dd5yh69rpf7GJWH02QKc66Axf4%7EoQ1AhFc0cLpSpS3MUMDp7D1m2jEjT98J4Ee3Hj1eH%7EtU0mGytyncEb-W1bNEZt8TdTIDwE8pY2S9sXpzGkbQrHv5A4QvR0fqEcvio47uvVjYqSH7ExCHJP5WeYEuT6lXNFgfn59oe0coyliIseAXLQet7X7Jbh2m64Tw__&Key-Pair-Id=K15QRJLYKIFSLZ&Download-Request-ID=587287740993120
