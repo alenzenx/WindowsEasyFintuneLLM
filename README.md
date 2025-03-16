@@ -1,6 +1,8 @@
 # Windows Easy Fintune LLM
 ![image](https://github.com/alenzenx/WindowsEasyFintuneLLM/blob/main/goodjob.jpg)
 
+## **Configuration**
+
 **System : Windows 11**
 
 **CUDA : 12.4**
@@ -16,6 +18,8 @@
 ## **1. Download and Install**
 python 3.11.0 + CUDA 12.4 + cuDNN v8.9.7
 
+CUDA and cuDNN install tutorial https://medium.com/@alenzenx/安裝-cuda12-6-與-cudnn-8-9-7-34f95ef8ce7f
+
 ## **2. Install C++ Compiler for Triton-Windows**
 #### 增加Windows系統環境變數(下面的路徑是預設路徑)
 CUDA_PATH
@@ -30,17 +34,18 @@ C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4
 3. C++ CMake tools for Windows
 4. MSBuild support for LLVM(clang-cl) toolset 
 
-# 修改Windows User環境變數Path項，加入(下面的路徑是預設路徑)
+#### 修改Windows User環境變數Path項，加入(下面的路徑是預設路徑)
 C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.43.34808\bin\Hostx64\x64
 
-# 虛擬環境(下面的路徑 C:\Users\User\Desktop\ourllm 自己修改，且 \Scripts\Activate.ps1 那行要一起改呦)
+## **3. Create Virtual Environment**
+(下面的路徑 C:\Users\User\Desktop\ourllm 自己修改，且 \Scripts\Activate.ps1 那行要一起改呦)
 python -m venv C:\Users\User\Desktop\ourllm
 C:\Users\User\Desktop\ourllm\Scripts\Activate.ps1
 
-# 安裝
+## **4. Install requirements**
 pip install -r requirements.txt
 
-# 下載原始llama2
+## **5. Download Ori llama2**
 pip install llama-stack
 llama model list --show-all
 llama download --source meta --model-id Llama-2-7b
