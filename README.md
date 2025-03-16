@@ -47,10 +47,13 @@ Verify CUDA GPU :
 #### Download Visual Stduio Installer
 #### Install Visual Studio Build Tools 2022 version : 17.13.2
 #### Install MSVC (Select within Visual Studio Build Tools 2022 version)
-1. MSVC v143 - VS 2022 C++ x64/x86 build tools(Latest)
-2. Windows 11 SDK(10.0.22621.0)
-3. C++ CMake tools for Windows
-4. MSBuild support for LLVM(clang-cl) toolset 
+>1. MSVC v143 - VS 2022 C++ x64/x86 build tools(Latest)
+
+>2. Windows 11 SDK(10.0.22621.0)
+
+>3. C++ CMake tools for Windows
+
+>4. MSBuild support for LLVM(clang-cl) toolset 
 
 #### Modify the Windows User environment variable Path and add the following (the paths below are the default paths)
     C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.43.34808\bin\Hostx64\x64
