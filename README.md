@@ -1,7 +1,7 @@
 # Windows Easy Fintune LLM
 ![image](https://github.com/alenzenx/WindowsEasyFintuneLLM/blob/main/goodjob.jpg)
 
-## **Configuration**
+## **Software Configuration**
 
 **OS : Windows 11**
 
@@ -14,6 +14,16 @@
 **pytorch : 2.6.0+cu124**
 
 **Triton for Windows : 3.2.0.post12**
+
+**LLM : LLaMA2-7B**
+
+**Finetune method : QLoRA**
+
+## **Hardware Configuration**
+
+**GPU : NVIDIA GeForce RTX 3060 12GB** *(important : 12GB of VRAM is the minimum standard.)*
+
+**RAM : 16GB** *(Better up)*
 
 ## **1. Download and Install**
 python 3.11.0 + CUDA 12.4 + cuDNN v8.9.7
@@ -157,8 +167,8 @@ class MyDummyDataset(Dataset):
             "output": example.get("output", ""),
         }
 
-## **9. LoRA單GPU訓練**
+## **9. Single GPU Finetune LLM (Train)**
 tune run lora_finetune_single_device --config custom_config.yaml
 
-## **10. 推理**
+## **10. Inference**
 python test.py
