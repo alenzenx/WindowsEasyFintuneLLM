@@ -1,4 +1,5 @@
 # Windows Easy Fintune LLM
+![image](https://raw.githubusercontent.com/alenzenx/WindowsEasyFintuneLLM/refs/heads/main/goodjob.jpg?token=GHSAT0AAAAAAC6YDKQ5LNZWWKCL3GFTCWM2Z6W5LXQ)
 
 **System : Windows 11**
 
@@ -12,7 +13,7 @@
 
 **Triton : 3.2.0.post12**
 
-# 自行安裝python 3.11.0 + CUDA 12.4 + cuDNN v8.9.7
+## Install python 3.11.0 + CUDA 12.4 + cuDNN v8.9.7
 
 # 增加Windows系統環境變數(下面的路徑是預設路徑)
 CUDA_PATH
