@@ -67,11 +67,6 @@ C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4
 C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.43.34808\bin\Hostx64\x64
 ```
 
-#### Verify Triton execution
-```
-python test_triton.py
-```
-
 ## **3. Create Virtual Environment**
 #### (Change "C:\Users\User\Desktop\ourllm" to your path)
 ```
@@ -81,7 +76,14 @@ python -m venv C:\Users\User\Desktop\ourllm
 C:\Users\User\Desktop\ourllm\Scripts\Activate.ps1
 ```
 ## **4. Install requirements**
-    pip install -r requirements.txt
+```
+pip install -r requirements.txt
+```
+
+#### Verify Triton execution
+```
+python test_triton.py
+```
 
 ## **5. Download raw LLaMA-2-7B**
 ```
