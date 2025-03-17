@@ -1,5 +1,5 @@
 # Windows Easy Fintune LLM
-### **" This is a simple Finetune LLM tutorial using Windows + Torchtune "**
+### **"This is a simple Finetune LLM tutorial using Windows + Torchtune"**
 
 ![image](https://github.com/alenzenx/WindowsEasyFintuneLLM/blob/main/goodjob.jpg)
 
@@ -102,7 +102,17 @@ llama download --source meta --model-id Llama-2-7b
 ```
 
 #### LLaMA-2 verification key (a URL starting with https)
-    https://download.llamameta.net/*?Policy=eyJTdGF0ZW1lbnQiOlt7InVuaXF1ZV9oYXNoIjoiMWh0d3JyeWVxOXE1cWpjMTQ5aDQ2OWx5IiwiUmVzb3VyY2UiOiJodHRwczpcL1wvZG93bmxvYWQubGxhbWFtZXRhLm5ldFwvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0MTk1ODM1MH19fV19&Signature=nCSq%7ECseY3cvvI5w7THDAAXAvaiqP81ibq5nLCztW1efQmL-f67TvxGrblYUGV5Kg7URAsDxJNp5NFdOVoyOX5E5fpFm1Dzi2xAfsrunyGVnud-uliH8HdHoEwT9Pmin5qSt4slG9v2n4hSw7t-htP4dd5yh69rpf7GJWH02QKc66Axf4%7EoQ1AhFc0cLpSpS3MUMDp7D1m2jEjT98J4Ee3Hj1eH%7EtU0mGytyncEb-W1bNEZt8TdTIDwE8pY2S9sXpzGkbQrHv5A4QvR0fqEcvio47uvVjYqSH7ExCHJP5WeYEuT6lXNFgfn59oe0coyliIseAXLQet7X7Jbh2m64Tw__&Key-Pair-Id=K15QRJLYKIFSLZ&Download-Request-ID=587287740993120
+##### You must apply from the following website
+https://www.llama.com/llama-downloads/
+
+##### Click "Previous language & safety models"
+
+##### Choose "Llama 2"
+
+**(a URL starting with https, similar to this)**
+```
+https://download.llamameta.net/*?Policy=eyJTdGF0ZW1lbnQiOlt7InVuaXF1ZV9oYXNoIjoiMWh0d3JyeWVxOXE1cWpjMTQ5aDQ2OWx5IiwiUmVzb3VyY2UiOiJodHRwczpcL1wvZG93bmxvYWQubGxhbWFtZXRhLm5ldFwvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0MTk1ODM1MH19fV19&Signature=nCSq%7ECseY3cvvI5w7THDAAXAvaiqP81ibq5nLCztW1efQmL-f67TvxGrblYUGV5Kg7URAsDxJNp5NFdOVoyOX5E5fpFm1Dzi2xAfsrunyGVnud-uliH8HdHoEwT9Pmin5qSt4slG9v2n4hSw7t-htP4dd5yh69rpf7GJWH02QKc66Axf4%7EoQ1AhFc0cLpSpS3MUMDp7D1m2jEjT98J4Ee3Hj1eH%7EtU0mGytyncEb-W1bNEZt8TdTIDwE8pY2S9sXpzGkbQrHv5A4QvR0fqEcvio47uvVjYqSH7ExCHJP5WeYEuT6lXNFgfn59oe0coyliIseAXLQet7X7Jbh2m64Tw__&Key-Pair-Id=K15QRJLYKIFSLZ&Download-Request-ID=587287740993120
+```
 
 ## **6. Convert the raw LLaMA-2 model into hf format (hf format=huggingface format)**
 ```
