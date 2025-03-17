@@ -1,4 +1,6 @@
 # Windows Easy Fintune LLM
+### **" This is a simple Finetune LLM tutorial using Windows + Torchtune "**
+
 ![image](https://github.com/alenzenx/WindowsEasyFintuneLLM/blob/main/goodjob.jpg)
 
 ## **Software Configuration**
@@ -29,6 +31,8 @@
 
 ## **1. Download and Install**
 ### *python 3.11.0 + CUDA 12.4 + cuDNN v8.9.7*
+#### python 3.11.0
+https://www.python.org/downloads/release/python-3110/
 
 #### CUDA and cuDNN similar install tutorial
 https://medium.com/@alenzenx/安裝-cuda12-6-與-cudnn-8-9-7-34f95ef8ce7f
@@ -44,7 +48,8 @@ Variable value
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4
 ```
 
-#### Download Visual Stduio Installer
+#### Download Visual Studio Installer
+https://visualstudio.microsoft.com/downloads/
 #### Open Visual Stduio Installer
 #### Install Visual Studio Build Tools 2022 version : 17.13.2
 #### Install MSVC (Select within Visual Studio Build Tools 2022 version)
@@ -65,7 +70,7 @@ C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.
 ```
 
 ## **3. Create Virtual Environment**
-#### (Change "C:\Users\User\Desktop\ourllm" to your path)
+#### (Change "C:\Users\User\Desktop\ourllm" to your project path)
 ```
 python -m venv C:\Users\User\Desktop\ourllm
 ```
