@@ -33,9 +33,6 @@
 #### CUDA and cuDNN similar install tutorial
 https://medium.com/@alenzenx/安裝-cuda12-6-與-cudnn-8-9-7-34f95ef8ce7f
 
-#### Verify CUDA GPU execution
-    python GPUtest.py
-
 ## **2. Install MSVC for Triton-Windows**
 #### Add a Windows System variables (The following path is the default path)
 Variable name
@@ -79,7 +76,10 @@ C:\Users\User\Desktop\ourllm\Scripts\Activate.ps1
 ```
 pip install -r requirements.txt
 ```
-
+#### Verify CUDA GPU execution
+```
+python GPUtest.py
+```
 #### Verify Triton execution
 ```
 python test_triton.py
