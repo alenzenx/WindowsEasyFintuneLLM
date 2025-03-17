@@ -152,7 +152,7 @@ python convert_llama_weights_to_hf.py --input_dir "Llama-2-7b" --model_size 7B -
 #### Verify custom_config.yaml
     tune validate custom_config.yaml
 
-## **If you want to train the full version instead of a dummy test : proceed to Step 9.**
+## **If you want to train the full finetune instead of a dummy test : proceed to Step 9.**
 
 ## **8. Create Dummy Test**
 #### Change batch size and create dummy test path
