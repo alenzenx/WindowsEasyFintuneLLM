@@ -230,5 +230,5 @@ python convert_llama_weights_to_hf.py --input_dir "Llama-2-7b" --model_size 7B -
 ## **9. Single GPU Finetune LLM (Train)**
     tune run lora_finetune_single_device --config custom_config.yaml
 
-## **10. Inference**
+## **10. Inference (QLoRA version)**
     python test.py
