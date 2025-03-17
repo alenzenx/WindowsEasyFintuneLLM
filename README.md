@@ -172,6 +172,7 @@ python convert_llama_weights_to_hf.py --input_dir "Llama-2-7b" --model_size 7B -
 ## **If you want to train the full finetune instead of a dummy test : proceed to Step 9.**
 
 ## **8. Create Dummy Test**
+#### **Write custom_config.yaml**
 #### Change batch size and create dummy test path
     dataset:
       _component_: my_dummy_dataset.MyDummyDataset
