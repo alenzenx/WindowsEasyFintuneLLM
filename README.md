@@ -1,4 +1,4 @@
-# Windows Easy Fintune LLM
+# Windows Easy Finetune LLM
 ### **"This is a simple Finetune LLM tutorial using Windows + Torchtune"**
 
 ![image](https://github.com/alenzenx/WindowsEasyFintuneLLM/blob/main/goodjob.jpg)
